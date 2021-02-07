@@ -21,7 +21,7 @@ func main() {
 	flag.Parse()
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
-	pool, err := pgxpool.Connect(context.Background(), "user=postgres password=1234 host=localhost port=5432 dbname=snippet07 sslmode=disable pool_max_conns=10")
+	pool, err := pgxpool.Connect(context.Background(), "user=postgres password=1234 host=localhost port=5435 dbname=snippet07 sslmode=disable pool_max_conns=10")
 	if err != nil {
 		log.Fatalf("Unable to connection to database: %v\n", err)
 	}
